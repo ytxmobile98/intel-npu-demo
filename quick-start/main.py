@@ -2,11 +2,13 @@
 
 from transformers import AutoTokenizer, TextStreamer
 from intel_npu_acceleration_library import NPUModelForCausalLM
+from intel_npu_acceleration_library.compiler import CompilerConfig
 import torch
 
 model_id = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 
-model = NPUModelForCausalLM.from_pretrained(model_id, use_cache=True, dtype=torch.int8).eval()
+config = CompilerConfig()
+model = NPUModelForCausalLM.from_pretrained(model_id, config, use_cache=True, dtype=torch.int8).eval()
 tokenizer = AutoTokenizer.from_pretrained(model_id, use_default_system_prompt=True)
 tokenizer.pad_token_id = tokenizer.eos_token_id
 streamer = TextStreamer(tokenizer, skip_special_tokens=True)
