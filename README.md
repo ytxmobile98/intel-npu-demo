@@ -1,2 +1,5 @@
-# intel-npu-demo
-Intel NPU demo
+# Intel NPU demo
+
+## Examples
+
+* [Quick Start](./quick-start/)
