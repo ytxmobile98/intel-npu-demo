@@ -1,11 +1,7 @@
-from torch.profiler import profile, ProfilerActivity
 from transformers import AutoTokenizer, TextStreamer, AutoModelForCausalLM
-from threading import Thread
 import intel_npu_acceleration_library
 from intel_npu_acceleration_library.compiler import CompilerConfig
 import torch
-import time
-import sys
 
 model_id = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 
