@@ -3,7 +3,6 @@
 from transformers import AutoTokenizer, TextStreamer
 from intel_npu_acceleration_library import NPUModelForCausalLM
 from intel_npu_acceleration_library.compiler import CompilerConfig
-import torch
 
 model_id = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 
