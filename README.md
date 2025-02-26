@@ -2,4 +2,5 @@
 
 ## Examples
 
-* [Quick Start](./quick-start/)
+* [Quick Start](./src/quick-start/)
+* [LLM inference](./src/llm-inference/)
